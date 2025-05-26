@@ -7,24 +7,24 @@ export function Footer() {
   const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
-    <div className="relative">
+    <div className="relative px-6">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 md:grid-cols-4 xl:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
               {" "}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
+                className="flex items-center space-x-2 text-2xl font-medium dark:text-gray-100"
               >
                 <Image
-                  src="/img/logo.svg"
+                  src="/img/logo-dark.png"
                   alt="N"
-                  width="32"
-                  height="32"
-                  className="w-8"
+                  width="60"
+                  height="60"
+                  className="w-28"
                 />
-                <span>Nextly</span>
+                {/* <span>Nextly</span> */}
               </Link>
             </div>
 
@@ -34,7 +34,7 @@ export function Footer() {
               And its completely open-source.
             </div>
 
-            <div className="mt-5">
+            {/* <div className="mt-5">
               <a
                 href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
                 target="_blank"
@@ -48,7 +48,7 @@ export function Footer() {
                   height="44"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -112,19 +112,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
+        <div className="text-sm text-center text-gray-600 dark:text-gray-400 mt-5">
           Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
           <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
+            MAK Tech Global.
           </a>{" "}
-          Illustrations from{" "}
+          {/* Illustrations from{" "}
           <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
             Glazestock
-          </a>
+          </a> */}
         </div>
       </Container>
       {/* Do not remove this */}
-      <Backlink />
+      {/* <Backlink /> */}
     </div>
   );
 }
