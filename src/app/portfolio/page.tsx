@@ -44,11 +44,7 @@ interface Project {
   status: 'completed' | 'ongoing' | 'maintenance';
 }
 
-interface PortfolioProps {
-  isDarkMode: boolean;
-}
-
-const Portfolio: React.FC<PortfolioProps> = ({ isDarkMode }) => {
+const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
