@@ -8,23 +8,23 @@ import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
 import { benefitOne, benefitTwo } from "@/components/data";
+import Products from "@/components/Products";
 export default function Home() {
   return (
     <Container>
       <Hero />
-      <SectionTitle
-        preTitle="Nextly Benefits"
-        title=" Why should you use this landing page"
+      <Products />
+      {/* <SectionTitle
+        preTitle="Smart Building Solutions"
+        title="MAK RES / BMS"
       >
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        Comprehensive building management platform that integrates HVAC, lighting, security, and energy management systems for optimal efficiency and control.
       </SectionTitle>
 
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
+      <Benefits data={benefitOne} /> */}
+      {/* <Benefits imgPos="right" data={benefitTwo} /> */}
 
-      <SectionTitle
+      {/* <SectionTitle
         preTitle="Watch a video"
         title="Learn how to fullfil your needs"
       >
@@ -33,7 +33,7 @@ export default function Home() {
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
 
-      <Video videoId="fZ0D0cnR88E" />
+      <Video videoId="fZ0D0cnR88E" /> */}
 
       <SectionTitle
         preTitle="Testimonials"

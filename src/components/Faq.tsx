@@ -36,21 +36,21 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What features does a building management platform typically include?",
+    answer: "It usually offers automated rent collection, maintenance tracking, tenant communication, and financial reporting.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "How does a building management system improve operational efficiency?",
+    answer: "By automating routine tasks, providing real-time data, and streamlining communication between tenants and managers.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "What services are offered by a 3PL platform?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "3PL platforms handle warehousing, order fulfillment, inventory management, and shipping logistics.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "How does a 3PL platform improve delivery times?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "By optimizing inventory locations, automating order processing, and partnering with multiple carriers for faster shipping.",
   },
 ];

@@ -88,11 +88,11 @@ export const Hero = () => {
 
             <div className="pt-2 text-gray-400 dark:text-gray-400">
               <Image
-                src="/img/client1.png"
+                src="/img/client3.webp"
                 alt="Client Logo"
                 width={100}
                 height={100}
-                className="object-contain w-24 h-24" 
+                className="object-contain w-24 h-24 dark:filter dark:invert transition duration-300 ease-in-out hover:scale-105" 
                 />
             </div>
 

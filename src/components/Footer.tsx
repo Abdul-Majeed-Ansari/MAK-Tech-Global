@@ -3,9 +3,16 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
 
+
 export function Footer() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
-  const legal = ["Terms", "Privacy", "Legal"];
+  const navigation = [
+    {name : "Products" , path : "/products"},
+    {name : "Services" , path : "/services"},
+    {name : "Portfolio" , path : "/portfolio"},
+    {name : "Contact Us" , path : "/contactus"},
+
+  ];
+  const legal = [{name : "Terms", path : "terms"}, {name : "Privacy", path : "privacy"}, { name : "Legal", path : "legal"}];
   return (
     <div className="relative px-6">
       <Container>
@@ -39,9 +46,7 @@ export function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              MAKTech Global delivers IT services and software to automate workflows, enhance experiences, and drive business growth. Their solutions are tailored to meet industry-specific needs, ensuring efficiency and long-term scalability.
             </div>
 
             {/* <div className="mt-5">
@@ -66,10 +71,10 @@ export function Footer() {
               {navigation.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={item.path}
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </div>
@@ -79,10 +84,10 @@ export function Footer() {
               {legal.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={item.path}
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {item.name}
                 </Link>
               ))}
             </div>
@@ -90,7 +95,7 @@ export function Footer() {
           <div className="">
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
-              <a
+              {/* <a
                 href="https://twitter.com/web3templates"
                 target="_blank"
                 rel="noopener"
@@ -113,8 +118,8 @@ export function Footer() {
               >
                 <span className="sr-only">Instagram</span>
                 <Instagram />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+              </a> */}
+              <a href="https://www.linkedin.com/company/107305914" target="_blank" rel="noopener">
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>

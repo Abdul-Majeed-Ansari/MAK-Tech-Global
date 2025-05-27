@@ -1,52 +1,92 @@
-import React from 'react';
-import { Building2, Truck, CheckCircle, ArrowRight, Users, BarChart3, Shield, Zap } from 'lucide-react';
+import React from "react";
+import {
+  CheckCircle,
+  ArrowRight,
+  Users,
+  BarChart3,
+  Shield,
+  Zap,
+  BookOpen,
+  Award,
+  Globe,
+  Target,
+} from "lucide-react";
+import Image from "next/image";
+import buildingManagementImage from "../../../public/img/Building.webp"; // Adjust the path as necessary
+import MAKProductlImage from "../../../public/img/3pl.png";
+import IeltsImage from "../../../public/img/ielts.jpg";
 
 const ProductsPage = () => {
   const products = [
     {
       id: 1,
-      title: "Building Management System",
+      title: "MAK RES / BMS",
       subtitle: "Smart Building Solutions",
-      description: "Comprehensive building management platform that integrates HVAC, lighting, security, and energy management systems for optimal efficiency and control.",
-      icon: Building2,
+      description:
+        "Comprehensive building management platform that integrates HVAC, lighting, security, and energy management systems for optimal efficiency and control.",
+      icon: buildingManagementImage,
       features: [
         "Real-time monitoring and control",
         "Energy optimization algorithms",
         "Automated maintenance scheduling",
         "Security system integration",
         "Mobile app control",
-        "Advanced analytics dashboard"
+        "Advanced analytics dashboard",
       ],
       benefits: [
         { icon: BarChart3, text: "Reduce energy costs by up to 30%" },
         { icon: Shield, text: "Enhanced security and access control" },
         { icon: Zap, text: "Automated system optimization" },
-        { icon: Users, text: "Centralized facility management" }
+        { icon: Users, text: "Centralized facility management" },
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
     },
     {
       id: 2,
       title: "MAK 3PL",
       subtitle: "Third-Party Logistics Platform",
-      description: "Advanced logistics management system designed to streamline warehouse operations, inventory tracking, and supply chain coordination for maximum efficiency.",
-      icon: Truck,
+      description:
+        "Advanced logistics management system designed to streamline warehouse operations, inventory tracking, and supply chain coordination for maximum efficiency.",
+      icon: MAKProductlImage,
       features: [
         "Warehouse management system",
         "Real-time inventory tracking",
         "Order fulfillment automation",
         "Multi-client management",
         "Integration with major carriers",
-        "Advanced reporting and analytics"
+        "Advanced reporting and analytics",
       ],
       benefits: [
         { icon: BarChart3, text: "Improve operational efficiency by 40%" },
         { icon: Shield, text: "Enhanced inventory accuracy" },
         { icon: Zap, text: "Automated order processing" },
-        { icon: Users, text: "Multi-tenant architecture" }
+        { icon: Users, text: "Multi-tenant architecture" },
       ],
-      image: "/api/placeholder/600/400"
-    }
+      image: "/api/placeholder/600/400",
+    },
+    {
+      id: 3,
+      title: "MAK EDU",
+      subtitle: "IELTS Success Partner",
+      description:
+        "Your trusted companion for mastering the IELTS exam and unlocking global opportunities. Modern, flexible, and impactful learning tailored to meet your international goals.",
+      icon: IeltsImage,
+      features: [
+        "Personalized study paths",
+        "Real-time progress insights",
+        "Expert guidance and strategies",
+        "Interactive practice sessions",
+        "Smart technology integration",
+        "Comprehensive skill building",
+      ],
+      benefits: [
+        { icon: BookOpen, text: "Proven IELTS preparation methods" },
+        { icon: Award, text: "Achieve your target band score" },
+        { icon: Globe, text: "Support for global opportunities" },
+        { icon: Target, text: "Personalized learning experience" },
+      ],
+      image: "/api/placeholder/600/400",
+    },
   ];
 
   return (
@@ -57,10 +97,11 @@ const ProductsPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="text-[#00bcb7]">Products</span>
+              Our <span className="text-[#4d4f4f]">Products</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-              Innovative solutions designed to transform your business operations and drive efficiency
+              Innovative solutions designed to transform your business
+              operations and drive efficiency
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-8 py-4 bg-[#00bcb7] hover:bg-[#038A87] text-white font-semibold rounded-lg transition-colors duration-200 group">
@@ -80,14 +121,27 @@ const ProductsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-32">
             {products.map((product, index) => (
-              <div key={product.id} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}>
+              <div
+                key={product.id}
+                className={`flex flex-col ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
+                } gap-12 lg:gap-20 items-center`}
+              >
                 {/* Product Image */}
                 <div className="flex-1 w-full">
                   <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#00bcb7] to-[#038A87] rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                    <div className="relative bg-gray-100 dark:bg-gray-800 rounded-2xl p-8 lg:p-12 min-h-[400px] flex items-center justify-center">
-                      <product.icon className="h-32 w-32 lg:h-48 lg:w-48 text-[#00bcb7] opacity-80" />
-                    </div>
+                    {/* <div className="relative bg-gray-100 dark:bg-gray-800 rounded-2xl p-8 lg:p-12 flex items-center justify-center"> */}
+                    {product.icon ? (
+                      <Image
+                        src={product.icon}
+                        alt={product.title}
+                        width={800}
+                        height={800}
+                        className="rounded-xl"
+                      />
+                    ) : null}
+                    {/* </div> */}
                   </div>
                 </div>
 
@@ -107,7 +161,10 @@ const ProductsPage = () => {
                     {/* Key Benefits */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                       {product.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                        <div
+                          key={idx}
+                          className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50"
+                        >
                           <benefit.icon className="h-5 w-5 text-[#00bcb7] flex-shrink-0" />
                           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                             {benefit.text}
@@ -117,19 +174,26 @@ const ProductsPage = () => {
                     </div>
 
                     {/* Features List */}
-                    <div className="mb-8">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Key Features:</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {product.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <CheckCircle className="h-4 w-4 text-[#00bcb7] flex-shrink-0" />
-                            <span className="text-gray-600 dark:text-gray-300 text-sm">
-                              {feature}
-                            </span>
-                          </div>
-                        ))}
+                    {product.features && product.id !== 3 && (
+                      <div className="mb-8">
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                          Key Features:
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {product.features.map((feature, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center space-x-2"
+                            >
+                              <CheckCircle className="h-4 w-4 text-[#00bcb7] flex-shrink-0" />
+                              <span className="text-gray-600 dark:text-gray-300 text-sm">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
@@ -156,7 +220,8 @@ const ProductsPage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Discover how our solutions can streamline your operations and drive growth for your organization.
+            Discover how our solutions can streamline your operations and drive
+            growth for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center px-8 py-4 bg-white text-[#00bcb7] hover:bg-gray-100 font-semibold rounded-lg transition-colors duration-200 group">
