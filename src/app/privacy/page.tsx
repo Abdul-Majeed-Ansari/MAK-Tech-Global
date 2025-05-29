@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
             Privacy Policy
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            MAKTech Global is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            MAK Tech Global is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
           </p>
           <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
             <p>Effective Date: June 1, 2025</p>

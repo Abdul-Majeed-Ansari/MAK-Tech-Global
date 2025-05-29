@@ -30,7 +30,7 @@ const page = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Acceptance of Terms</h2>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    By using MAKTech Globals platform, you agree to comply with and be bound by these Terms and
+                    By using MAK Tech Globals platform, you agree to comply with and be bound by these Terms and
                     Conditions. If you disagree with any part of the terms, do not use our platform.
                   </p>
                 </div>

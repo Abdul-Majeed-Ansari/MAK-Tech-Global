@@ -13,7 +13,7 @@ export const Testimonials = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              MAKTech Global transformed <Mark>property management</Mark> with <Mark>automated rent</Mark>, <Mark>real-time maintenance</Mark>, and tailored digital solutions.
+              MAK Tech Global transformed <Mark>property management</Mark> with <Mark>automated rent</Mark>, <Mark>real-time maintenance</Mark>, and tailored digital solutions.
             </p>
 
             <Avatar
@@ -26,7 +26,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              MAKTech Global revolutionized <Mark>real estate management</Mark> through <Mark>automated payment</Mark>, <Mark>instant maintenance updates</Mark>, and customized digital tools.
+              MAK Tech Global revolutionized <Mark>real estate management</Mark> through <Mark>automated payment</Mark>, <Mark>instant maintenance updates</Mark>, and customized digital tools.
             </p>
 
             <Avatar

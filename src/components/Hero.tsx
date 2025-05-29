@@ -12,7 +12,7 @@ export const Hero = () => {
              <span>IT</span> & <span>Custom Software Solutions</span>
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 md:text-1xl lg:text-xl xl:text-2xl dark:text-gray-300">
-             MAKTech Global delivers IT services and software to automate workflows, enhance experiences, and drive business growth.
+             MAK Tech Global delivers IT services and software to automate workflows, enhance experiences, and drive business growth.
             </p>
 
             <div className="flex flex-col items-start space-y-2 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
@@ -66,7 +66,7 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
+            <div className="pt-2 text-gray-400 dark:filetr dark:invert dark:text-gray-400">
               <Image
                 src="/img/client1.png"
                 alt="Client Logo"
@@ -96,9 +96,9 @@ export const Hero = () => {
                 />
             </div>
 
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
+            <div className="pt-2 text-gray-400 dark:filter invert dark:text-gray-400">
               <Image
-                src="/img/client1.png"
+                src="/img/client4.jpg"
                 alt="Client Logo"
                 width={100}
                 height={100}
@@ -108,7 +108,7 @@ export const Hero = () => {
 
             <div className="pt-2 text-gray-400 dark:text-gray-400">
               <Image
-                src="/img/client1.png"
+                src="/img/client5.png"
                 alt="Client Logo"
                 width={100}
                 height={100}

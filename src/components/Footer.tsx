@@ -46,7 +46,7 @@ export function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              MAKTech Global delivers IT services and software to automate workflows, enhance experiences, and drive business growth. Their solutions are tailored to meet industry-specific needs, ensuring efficiency and long-term scalability.
+              MAK Tech Global delivers IT services and software to automate workflows, enhance experiences, and drive business growth. Their solutions are tailored to meet industry-specific needs, ensuring efficiency and long-term scalability.
             </div>
 
             {/* <div className="mt-5">
