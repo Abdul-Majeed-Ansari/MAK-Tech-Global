@@ -12,7 +12,7 @@ export function Footer() {
     {name : "Contact Us" , path : "/contactus"},
 
   ];
-  const legal = [{name : "Terms", path : "terms"}, {name : "Privacy", path : "privacy"}, { name : "Legal", path : "legal"}];
+  const legal = [{name : "Terms", path : "terms"}, {name : "Privacy", path : "privacy"}];
   return (
     <div className="relative px-6">
       <Container>

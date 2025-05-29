@@ -31,7 +31,8 @@ import {
   Play,
   X,
   Sun,
-  Moon
+  Moon,
+  BadgeCheck
 } from 'lucide-react';
 
 
@@ -45,7 +46,6 @@ interface Service {
   technologies: string[];
   deliverables: string[];
   timeline: string;
-  startingPrice: string;
   category: 'development' | 'design' | 'consulting' | 'support';
   popular?: boolean;
 }
@@ -96,7 +96,6 @@ const Services: React.FC = () => {
         "3 months free support"
       ],
       timeline: "8-16 weeks",
-      startingPrice: "$15,000",
       category: "development",
       popular: true
     },
@@ -125,7 +124,6 @@ const Services: React.FC = () => {
         "6 months maintenance"
       ],
       timeline: "12-20 weeks",
-      startingPrice: "$20,000",
       category: "development"
     },
     {
@@ -153,35 +151,6 @@ const Services: React.FC = () => {
         "90 days support"
       ],
       timeline: "10-18 weeks",
-      startingPrice: "$12,000",
-      category: "development"
-    },
-    {
-      id: 4,
-      title: "AI & Machine Learning",
-      description: "Intelligent solutions using artificial intelligence and machine learning technologies.",
-      longDescription: "Harness the power of AI to automate processes, gain insights from data, and create intelligent applications that learn and adapt to user behavior.",
-      icon: <Zap className="w-8 h-8" />,
-      features: [
-        "Custom AI model development",
-        "Natural language processing",
-        "Computer vision solutions",
-        "Predictive analytics",
-        "Chatbot development",
-        "Recommendation systems",
-        "Data analysis and insights",
-        "ML model deployment"
-      ],
-      technologies: ["Python", "TensorFlow", "PyTorch", "OpenAI", "Hugging Face", "AWS ML"],
-      deliverables: [
-        "Trained AI models",
-        "Integration documentation",
-        "API endpoints",
-        "Performance metrics",
-        "Model monitoring setup"
-      ],
-      timeline: "14-24 weeks",
-      startingPrice: "$25,000",
       category: "development"
     },
     {
@@ -209,11 +178,37 @@ const Services: React.FC = () => {
         "Asset library"
       ],
       timeline: "6-12 weeks",
-      startingPrice: "$8,000",
       category: "design"
     },
     {
-      id: 6,
+  id: 6,
+  title: "Logo Design",
+  description: "Crafting memorable logos that capture your brand's identity and leave a lasting impression.",
+  longDescription: "We specialize in designing unique, versatile logos that communicate your brand’s values and set you apart. Our process includes brand discovery, concept development, and design refinement to ensure a strong, cohesive visual identity.",
+  icon: <BadgeCheck className="w-8 h-8" />,
+  features: [
+    "Brand discovery and strategy",
+    "Concept development",
+    "Typography and color exploration",
+    "Multiple logo concepts",
+    "Revision cycles",
+    "Scalable vector formats",
+    "Logo usage guidelines",
+    "Monogram and icon variations"
+  ],
+  technologies: ["Adobe Illustrator", "Affinity Designer", "CorelDRAW", "Figma", "Procreate"],
+  deliverables: [
+    "Primary and secondary logos",
+    "Black-and-white and color versions",
+    "Logo usage guide",
+    "Vector and raster files (AI, EPS, SVG, PNG)",
+    "Favicon and social icons"
+  ],
+  timeline: "2-4 weeks",
+  category: "design"
+},
+    {
+      id: 7,
       title: "Cloud Solutions",
       description: "Scalable cloud infrastructure and migration services for modern businesses.",
       longDescription: "Modernize your infrastructure with cloud solutions that provide scalability, reliability, and cost-effectiveness. We help you migrate to the cloud and optimize your operations.",
@@ -237,11 +232,10 @@ const Services: React.FC = () => {
         "Cost optimization plan"
       ],
       timeline: "8-14 weeks",
-      startingPrice: "$18,000",
       category: "consulting"
     },
     {
-      id: 7,
+      id: 8,
       title: "Digital Marketing & SEO",
       description: "Drive traffic and conversions with comprehensive digital marketing strategies.",
       longDescription: "Boost your online presence with data-driven marketing strategies, SEO optimization, and conversion rate optimization that deliver measurable results.",
@@ -265,11 +259,10 @@ const Services: React.FC = () => {
         "ROI analysis"
       ],
       timeline: "4-8 weeks setup",
-      startingPrice: "$5,000",
       category: "consulting"
     },
     {
-      id: 8,
+      id: 9,
       title: "Technical Support & Maintenance",
       description: "Ongoing support and maintenance services to keep your applications running smoothly.",
       longDescription: "Ensure your applications stay secure, updated, and performing optimally with our comprehensive support and maintenance services.",
@@ -293,7 +286,6 @@ const Services: React.FC = () => {
         "Update documentation"
       ],
       timeline: "Ongoing",
-      startingPrice: "$2,000/month",
       category: "support"
     }
   ];
@@ -391,14 +383,14 @@ const Services: React.FC = () => {
               software development and technology services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+              {/* <button 
                 onClick={() => setShowVideo(true)}
                 className="flex items-center gap-2 bg-white text-[#00bcb7] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#00bcb7] transition-colors"
                 aria-label="Watch our company story video"
               >
                 <Play className="w-5 h-5" />
                 Watch Our Story
-              </button>
+              </button> */}
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#00bcb7] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#00bcb7] transition-colors">
                 Get Free Quote
               </button>
@@ -485,9 +477,9 @@ const Services: React.FC = () => {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                       Starting at {service.startingPrice}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
 
@@ -534,36 +526,38 @@ const Services: React.FC = () => {
             <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-[#00bcb7]"></div>
 
             <div className="space-y-12">
-              {processes.map((process, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8`}>
-                  <div className="flex-1">
-                    <div className="p-6 rounded-xl bg-white dark:bg-gray-900 shadow-lg">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 bg-[#00bcb7] text-white rounded-full flex items-center justify-center font-bold">
-                          {process.step}
+              {processes.map((process, index) => {
+                return (
+                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8`}>
+                    <div className="flex-1">
+                      <div className="p-6 rounded-xl bg-white dark:bg-gray-900 shadow-lg">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 bg-[#00bcb7] text-white rounded-full flex items-center justify-center font-bold">
+                            {process.step}
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                              {process.title}
+                            </h3>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">
+                              {process.duration}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                            {process.title}
-                          </h3>
-                          <p className="text-sm text-gray-500 dark:text-gray-400">
-                            {process.duration}
-                          </p>
-                        </div>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {process.description}
+                        </p>
                       </div>
-                      <p className="text-gray-600 dark:text-gray-300">
-                        {process.description}
-                      </p>
                     </div>
+              
+                    <div className="hidden lg:flex w-16 h-16 bg-[#00bcb7] text-white rounded-full items-center justify-center">
+                      {process.icon}
+                    </div>
+              
+                    <div className="flex-1 lg:block hidden"></div>
                   </div>
-
-                  <div className="hidden lg:flex w-16 h-16 bg-[#00bcb7] text-white rounded-full items-center justify-center">
-                    {process.icon}
-                  </div>
-
-                  <div className="flex-1 lg:block hidden"></div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -615,9 +609,9 @@ const Services: React.FC = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                       {selectedService.title}
                     </h2>
-                    <p className="text-lg text-gray-500 dark:text-gray-400">
+                    {/* <p className="text-lg text-gray-500 dark:text-gray-400">
                       Starting at {selectedService.startingPrice}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
 

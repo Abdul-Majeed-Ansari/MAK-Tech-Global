@@ -95,7 +95,7 @@ const ContactUs: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      details: '+92-21-34800935'
+      details: '+92 342 2630693'
     },
     {
       icon: <Mail className="w-6 h-6" />,

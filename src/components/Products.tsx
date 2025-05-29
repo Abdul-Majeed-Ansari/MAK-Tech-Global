@@ -67,7 +67,7 @@ const Products = () => {
     },
     {
       id: 3,
-      title: "MAK EDU",
+      title: "MAK IELTS",
       subtitle: "IELTS Success Partner",
       description:
         "Your trusted companion for mastering the IELTS exam and unlocking global opportunities. Modern, flexible, and impactful learning tailored to meet your international goals.",

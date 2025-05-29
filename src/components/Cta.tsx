@@ -10,9 +10,9 @@ export const Cta = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Heart className="w-6 h-6 text-emerald-600 dark:text-emerald-500" />
-              <h1 className="text-4xl md:text-5xl font-bold text-white dark:text-white">
+              <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white">
                 Help Kids in Palestine
-              </h1>
+              </h2>
             </div>
             <p className="text-xl md:text-2xl text-white dark:text-gray-300">
               Lets work together to give children the care and support they need!
