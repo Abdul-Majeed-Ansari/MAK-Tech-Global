@@ -129,7 +129,7 @@ export function Footer() {
 
         <div className="text-sm text-center text-gray-600 dark:text-gray-400 mt-5">
           Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
+          <a href="/" target="_blank" rel="noopener">
             MAK Tech Global.
           </a>{" "}
           {/* Illustrations from{" "}
