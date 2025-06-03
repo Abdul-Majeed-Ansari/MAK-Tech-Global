@@ -18,22 +18,22 @@ export const Navbar = () => {
         {/* Logo  */}
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-            <span>
+            <span className="w-36 h-10">
               {/* Logo for Light Mode */}
               <Image
                 src="/img/logo-white.png"
-                width={60}
-                height={60}
+                width={200}
+                height={100}
                 alt="Logo Light"
-                className="w-28 block dark:hidden"
+                className="block dark:hidden"
               />
               {/* Logo for Dark Mode */}
-              <Image
+                <Image
                 src="/img/logo-dark.png"
-                width={60}
-                height={60}
+                width={200}
+                height={100}
                 alt="Logo Dark"
-                className="w-28 hidden dark:block"
+                className="hidden dark:block"
               />
             </span>
           </span>
