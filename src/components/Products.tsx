@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import {
@@ -15,9 +16,11 @@ import {
 import buildingManagementImage from "../../public/img/Building.webp"; // Adjust the path as necessary
 import MAKProductlImage from "../../public/img/3pl.png";
 import IeltsImage from "../../public/img/ielts.jpg";
+import { useRouter } from "next/navigation";
 // import MAKEduImage from '../../public/img/mak-edu.png' // You'll need to add this image
 
 const Products = () => {
+
   const products = [
     {
       id: 1,
@@ -89,8 +92,10 @@ const Products = () => {
       image: "/api/placeholder/600/400",
     },
   ];
+
+  const router = useRouter();
   return (
-    <section className="py-20 lg:py-32">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-32">
           {products.map((product, index) => (
@@ -109,8 +114,10 @@ const Products = () => {
                     <Image
                       src={product.icon}
                       alt={product.title}
-                      width={800}
-                      height={800}
+                      width={524}
+                      height={552}
+                      quality={100}
+                      // unoptimized
                       className="rounded-xl"
                     />
                   ) : (
@@ -179,11 +186,11 @@ const Products = () => {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="inline-flex items-center justify-center px-6 py-3 bg-[#00bcb7] hover:bg-[#038A87] text-white font-semibold rounded-lg transition-colors duration-200 group">
+                    <button onClick={()=> router.push('/products')} className="inline-flex items-center justify-center px-6 py-3 bg-[#00bcb7] hover:bg-[#038A87] text-white font-semibold rounded-lg transition-colors duration-200 group">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </button>
-                    <button className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-[#00bcb7] hover:text-[#00bcb7] font-semibold rounded-lg transition-all duration-200">
+                    <button onClick={(()=> router.push('/contactus'))} className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-[#00bcb7] hover:text-[#00bcb7] font-semibold rounded-lg transition-all duration-200">
                       {product.id === 3 ? "Start Your Journey" : "Request Demo"}
                     </button>
                   </div>

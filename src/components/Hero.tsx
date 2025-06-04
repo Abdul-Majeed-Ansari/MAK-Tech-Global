@@ -7,7 +7,7 @@ export const Hero = () => {
     <>
       <Container className="flex flex-wrap">
         <div className="flex items-center w-full lg:w-1/2">
-          <div className="max-w-2xl mb-8">
+          <div className="max-w-2xl">
             <h1 className="text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
              <span>IT</span> & <span>Custom Software Solutions</span>
             </h1>
@@ -65,7 +65,7 @@ export const Hero = () => {
             clients & customers worldwide.
           </div>
 
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
+          <div className="flex flex-wrap justify-center gap-5 md:justify-around">
             <div className="pt-2 text-gray-400 dark:filetr dark:invert dark:text-gray-400">
               <Image
                 src="/img/client1.png"
